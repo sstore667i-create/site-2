@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez nos biens et services immobiliers. Contactez notre agence pour votre projet immobilier.">
+    <title>Agence Immobilière</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <a class="logo" href="index.html" aria-label="Accueil - Agence Immobilière">
+                <img src="images/logo-crop.png" alt="Logo de l'agence immobilière">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="biens.html">Nos biens</a></li>
+                <li><a href="services.html">Nos services</a></li>
+                <li><a href="#contact" data-open-contact>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Votre projet immobilier commence ici</h1>
+                <p>Trouvez le bien qui vous correspond.</p>
+                <div class="hero-buttons">
+                    <a href="biens.html" class="hero-btn red-btn">Nos biens <span>→</span></a>
+                    <a href="services.html" class="hero-btn">Nos services <span>→</span></a>
+                    <button class="hero-btn contact-btn" type="button" data-open-contact>Contact <span>→</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation">
+            <h2>À propos de nous</h2>
+            <p>Présentation de l'entreprise immobilière.</p>
+        </section>
+
+        <section class="services">
+            <h2>Nos services</h2>
+            <div class="services-container">
+                <div class="service"><h3>Vente</h3><p>Description du service.</p></div>
+                <div class="service"><h3>Location</h3><p>Description du service.</p></div>
+                <div class="service"><h3>Accompagnement</h3><p>Description du service.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Agence Immobilière</p>
+        <div class="footer-socials" aria-label="Réseaux sociaux">
+            <a href="#" class="social-icon whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- FENÊTRE DE CONTACT -->
+<div class="contact-modal" id="contactModal" aria-hidden="true">
+    <div class="contact-modal-backdrop" data-close-contact></div>
+
+    <section class="contact-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+        <button type="button" class="contact-close" data-close-contact aria-label="Fermer la fenêtre">&times;</button>
+
+     <div class="contact-modal-header">
+
+    <div class="contact-modal-logo">
+        <img src="images/logo-crop.png" alt="Logo de l'agence">
+    </div>
+
+    <div class="contact-modal-heading">
+
+        <span>VOTRE AGENCE IMMOBILIÈRE</span>
+
+        <h2 id="contactModalTitle">
+            Votre projet immobilier commence ici.
+        </h2>
+
+        <p>
+            Vous recherchez un bien immobilier ?
+            Notre équipe est à votre écoute pour vous accompagner
+            et répondre à toutes vos questions.
+        </p>
+
+    </div>
+
+</div>
+
+        <div class="contact-modal-divider"></div>
+
+        <form id="contactRequestForm" class="contact-request-form">
+            <input type="hidden" name="_subject" value="Nouvelle demande depuis le site de l'agence immobilière">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_replyto" value="">
+            <input type="hidden" name="_ts" id="contactFormTimestamp" value="">
+            <div class="contact-honeypot" aria-hidden="true">
+                <label for="contactWebsite">Ne pas remplir ce champ</label>
+                <input type="text" id="contactWebsite" name="_honey" tabindex="-1" autocomplete="off">
+            </div>
+<div class="contact-form-title">
+
+    <span>DEMANDE DE RENSEIGNEMENTS</span>
+
+    <h3>Parlons de votre projet</h3>
+
+    <p>
+        Remplissez les informations ci-dessous
+        et nous vous contacterons rapidement.
+    </p>
+
+</div>
+            <div class="contact-fields-grid">
+                <div class="contact-field">
+                    <label for="clientName">PRÉNOM &amp; NOM <span>*</span></label>
+                    <input type="text" id="clientName" name="nom" placeholder="Ex : Prénom Nom" autocomplete="name" required>
+                </div>
+                <div class="contact-field">
+                    <label for="clientPhone">TÉLÉPHONE <span>*</span></label>
+                    <input type="tel" id="clientPhone" name="telephone" placeholder="Ex : 0770 XX XX XX" autocomplete="tel" inputmode="tel" required>
+                </div>
+                <div class="contact-field">
+                    <label for="clientEmail">EMAIL <span>*</span></label>
+                    <input type="email" id="clientEmail" name="email" placeholder="Ex : email@example.com" autocomplete="email" required>
+                </div>
+                <div class="contact-field">
+                    <label for="clientWilaya">WILAYA <span>*</span></label>
+                    <select id="clientWilaya" name="wilaya" required>
+                        <option value="" disabled selected>Sélectionnez votre wilaya</option>
+                        <option>Adrar</option><option>Chlef</option><option>Laghouat</option><option>Oum El Bouaghi</option>
+                        <option>Batna</option><option>Béjaïa</option><option>Biskra</option><option>Béchar</option>
+                        <option>Blida</option><option>Bouira</option><option>Tamanrasset</option><option>Tébessa</option>
+                        <option>Tlemcen</option><option>Tiaret</option><option>Tizi Ouzou</option><option>Alger</option>
+                        <option>Djelfa</option><option>Jijel</option><option>Sétif</option><option>Saïda</option>
+                        <option>Skikda</option><option>Sidi Bel Abbès</option><option>Annaba</option><option>Guelma</option>
+                        <option>Constantine</option><option>Médéa</option><option>Mostaganem</option><option>M'Sila</option>
+                        <option>Mascara</option><option>Ouargla</option><option>Oran</option><option>El Bayadh</option>
+                        <option>Illizi</option><option>Bordj Bou Arréridj</option><option>Boumerdès</option><option>El Tarf</option>
+                        <option>Tindouf</option><option>Tissemsilt</option><option>El Oued</option><option>Khenchela</option>
+                        <option>Souk Ahras</option><option>Tipaza</option><option>Mila</option><option>Aïn Defla</option>
+                        <option>Naâma</option><option>Aïn Témouchent</option><option>Ghardaïa</option><option>Relizane</option>
+                        <option>Timimoun</option><option>Bordj Badji Mokhtar</option><option>Ouled Djellal</option><option>Béni Abbès</option>
+                        <option>In Salah</option><option>In Guezzam</option><option>Touggourt</option><option>Djanet</option>
+                        <option>El M'Ghair</option><option>El Meniaa</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <label class="contact-section-label">TYPOLOGIE SOUHAITÉE <span>*</span></label>
+                <div class="contact-typology-options">
+                    <label class="contact-option"><input type="radio" name="typologie" value="F2" required><span>F2</span></label>
+                    <label class="contact-option"><input type="radio" name="typologie" value="F3"><span>F3</span></label>
+                    <label class="contact-option"><input type="radio" name="typologie" value="F4"><span>F4</span></label>
+                    <label class="contact-option"><input type="radio" name="typologie" value="F5"><span>F5</span></label>
+                </div>
+            </div>
+
+            <div class="contact-field contact-message-field">
+                <label for="clientMessage">MESSAGE (OPTIONNEL)</label>
+                <textarea id="clientMessage" name="message" placeholder="Votre message..." rows="3"></textarea>
+            </div>
+
+            <label class="contact-check-row">
+                <input type="checkbox" name="rappel" id="clientCallback" value="Oui">
+                <span>Je souhaite être rappelé par un conseiller.</span>
+            </label>
+
+            <label class="contact-check-row contact-privacy-row">
+                <input type="checkbox" name="consentement" value="Accepté" required>
+                <span>J'accepte que mes données personnelles soient collectées et traitées uniquement pour le traitement de ma demande, conformément à la loi n° 18-07 relative à la protection des données personnelles.</span>
+            </label>
+
+            <p id="contactFormStatus" class="contact-form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="contact-submit">ENVOYER MA DEMANDE</button>
+        </form>
+    </section>
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
