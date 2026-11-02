@@ -1,29 +1,32 @@
-PROJET SITE-1 — VERSION MODIFIÉE
+5S CONSTRUCTION — VERSION REDESIGNÉE
 
 MODIFICATIONS INTÉGRÉES
-- Logo original recadré (images/logo-crop.png) et agrandi sur toutes les pages.
-- Bouton Contact de l'accueil : ouverture d'une fenêtre modale.
-- Formulaire avec nom, téléphone, email, wilaya, typologie F2/F3/F4/F5, message facultatif, demande de rappel et consentement.
-- La rubrique « Options de paiement » n'est pas présente.
-- Envoi AJAX du formulaire vers sievasamyconstruction.d3@gmail.com via FormSubmit.
-- Icônes Instagram, Facebook et WhatsApp déplacées sous le copyright dans le footer de chaque page.
-- Logo texte temporaire supprimé dans les pages qui l'utilisaient.
+- Navigation textuelle retirée sur toutes les pages : seul le logo reste dans l’en-tête, centré horizontalement.
+- Accueil entièrement restructuré : présentation éditoriale en deux colonnes, photo de résidence dans un cadre vertical dédié, boutons repositionnés et sections de présentation, services et contact.
+- Nouveau thème sombre : graphite, surfaces profondes, texte clair et accent vert assorti au logo (avec le rouge conservé dans l’identité visuelle).
+- Pages « Nos biens », « Nos services » et « Contact » harmonisées avec le même univers visuel.
+- Image d’accueil recadrée dans un cadre adapté à son format portrait, au lieu d’être étirée en arrière-plan sur toute la page.
+- Animations d’entrée, apparition des sections au défilement, effets de survol sur les cartes et boutons et défilement fluide.
+- Mise en page responsive pour ordinateur, tablette et mobile.
+- Le formulaire de contact, sa fenêtre modale, ses champs, son envoi AJAX et ses validations sont conservés. La fenêtre « Nous peaufinons chaque détail » n’a pas été ajoutée.
 
-À FAIRE AVANT MISE EN LIGNE
-1. Décompresser cette archive.
-2. Ouvrir le dossier site-1-main dans VS Code.
-3. Lancer index.html avec Live Server pour tester l'affichage.
-4. Effectuer un premier envoi de test depuis le formulaire.
-5. Ouvrir la boîte sievasamyconstruction.d3@gmail.com et cliquer sur le lien de confirmation envoyé par FormSubmit. L'envoi des prochaines demandes sera activé après cette confirmation.
-6. Remplacer les href="#" des trois icônes du footer par les vraies URL Instagram, Facebook et WhatsApp de l'agence. Le projet d'origine ne contenait pas ces URL, elles ne peuvent donc pas être devinées.
+FICHIERS MODIFIÉS / AJOUTÉS
+- index.html : nouveau contenu et nouvelle disposition de l’accueil.
+- biens.html : en-tête centré et présentation modernisée des rubriques de biens.
+- services.html : en-tête centré et cartes de services actualisées.
+- contact.html : en-tête centré et page de contact modernisée.
+- css/modern.css : nouvelle feuille de style de la refonte, chargée après css/style.css.
+- js/script.js : ajout de l’observation des sections pour les animations au défilement ; la logique du formulaire est conservée.
+- images/photo1.jpg et images/logo-crop.png : assets existants réutilisés, sans remplacement.
 
-FICHIERS MODIFIÉS
-- index.html
-- biens.html
-- services.html
-- contact.html
-- css/style.css
-- js/script.js
-- images/logo-crop.png (nouvelle version recadrée du logo d'origine)
+POUR TESTER
+1. Décompresser l’archive.
+2. Ouvrir le dossier « site-2-main » dans VS Code.
+3. Lancer index.html avec Live Server.
+4. Tester les liens « Découvrir nos biens », « Nos services » et les boutons qui ouvrent le formulaire.
+5. Faire un envoi de test du formulaire et vérifier que le service FormSubmit est bien activé.
+6. Remplacer les liens sociaux href="#" par les URL réelles de l’entreprise avant publication.
 
-Le fichier images/logo.png d'origine est conservé.
+À NOTER
+- Les cartes de la page « Nos biens » sont encore des emplacements de contenu : il faudra y mettre les photos, noms, prix et descriptions réels des biens lorsqu’ils seront disponibles.
+- La police DM Sans / Playfair Display est chargée depuis Google Fonts ; des polices de secours sont prévues si le service externe n’est pas accessible.

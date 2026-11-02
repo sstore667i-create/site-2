@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Animations d'apparition au défilement (désactivées si l'utilisateur préfère moins d'animations).
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const revealObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+        revealItems.forEach(function (item) { revealObserver.observe(item); });
+    } else {
+        revealItems.forEach(function (item) { item.classList.add("is-visible"); });
+    }
+
     const modal = document.getElementById("contactModal");
     const openButtons = document.querySelectorAll("[data-open-contact]");
 
